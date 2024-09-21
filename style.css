@@ -1,0 +1,137 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.price-grid {
+  max-width: 375px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.community-section {
+  background-color: white;
+  padding: 2rem;
+}
+
+.community-title {
+  color: var(--cyan);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.community-guarantee {
+  color: var(--bright-yellow);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.community-description {
+  color: var(--grayish-blue);
+}
+
+.subscription-section {
+  background-color: var(--cyan);
+  color: white;
+  padding: 2rem;
+}
+
+.subscription-title {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.subscription-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.price-period {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.subscription-description {
+  margin-bottom: 2rem;
+}
+
+.signup-button {
+  background-color: var(--bright-yellow);
+  color: white;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: hsl(71, 73%, 48%);
+}
+
+.why-us-section {
+  background-color: hsl(179, 62%, 47%);
+  color: white;
+  padding: 2rem;
+}
+
+.why-us-title {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.why-us-list {
+  list-style-type: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 768px) {
+  .price-grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .community-section {
+    grid-column: 1 / 3;
+  }
+
+  .community-title {
+    font-size: 1.5rem;
+  }
+
+  .subscription-section,
+  .why-us-section {
+    padding: 2.5rem;
+  }
+}
